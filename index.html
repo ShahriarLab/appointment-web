@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="dashboard">
+        <h2>Job Application Tracker</h2>
+        <div class="stats">
+            <div class="stat-card">Total: <span id="total-count">8</span></div>
+            <div class="stat-card">Interview: <span id="interview-count">0</span></div>
+            <div class="stat-card">Rejected: <span id="rejected-count">0</span></div>
+        </div>
+    </header>
+
+    <section class="filter-section">
+        <div class="tab-header">
+            <h3>Available Jobs</h3>
+            <span id="tab-job-count">8 Jobs</span>
+        </div>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="filterJobs('all')">All</button>
+            <button class="tab-btn" onclick="filterJobs('interview')">Interview</button>
+            <button class="tab-btn" onclick="filterJobs('rejected')">Rejected</button>
+        </div>
+    </section>
+
+    <main id="job-list" class="job-grid">
+        </main>
+
+    <div id="no-jobs" class="hidden">
+        <img src="jobs.png" alt="No Jobs">
+        <h4>No Jobs Available</h4>
+        <p>Check back soon for new job opportunities</p>
+    </div>
+
+    
+</body>
+</html>
